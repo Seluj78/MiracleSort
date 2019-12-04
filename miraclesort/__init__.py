@@ -1,0 +1,1 @@
+from miraclesort._miraclesort import miraclesort
