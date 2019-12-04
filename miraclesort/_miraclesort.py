@@ -1,11 +1,6 @@
-def _is_sorted(lst: list) -> bool:
-    for i in range(len(lst) - 1):
-        if lst[i] > lst[i + 1]:
-            return False
-    return True
-
-
 def miraclesort(lst: list) -> list:
-    while not _is_sorted(lst):
+    if len(lst) <= 1:
+        return lst
+    while not lst[0] <= min(lst[1:]):
         pass
-    return lst
+    return [lst[0]] + miraclesort(lst[1:])
